@@ -56,7 +56,7 @@ steps:
     inputs:
       command: 'pack'
       projects: '**/*.csproj'
-      arguments: '--no-build --configuration $(buildConfiguration)'
+      arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
       versioningScheme: byPrereleaseNumber
       majorVersion: '1'
       minorVersion: '0'
